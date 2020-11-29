@@ -1,0 +1,1 @@
+FBL.Config.Playermodel = "models/alaxe/playermodels/of/mercenary.mdl"

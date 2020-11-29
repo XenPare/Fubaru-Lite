@@ -1,0 +1,6 @@
+"fbl"
+{
+	"base"		"base"
+	"title"		"Classic Jailbreak"
+	"menusystem"	"1"
+}
