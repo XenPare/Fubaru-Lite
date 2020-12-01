@@ -19,13 +19,12 @@ SWEP.AdminSpawnable	= true
 SWEP.FireSound = Sound("Weapon_PickPocket_Pistol.Single")
 
 SWEP.Primary.ClipSize = 12
-SWEP.Primary.DefaultClip = 12
+SWEP.Primary.DefaultClip = 84
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "Pistol"
 
 SWEP.Shots = 1
 SWEP.Damage = 19
 
-SWEP.DeployTime = 1
-SWEP.FireDelay = 0.15
+SWEP.FireDelay = 0.13
 SWEP.Recoil = 4

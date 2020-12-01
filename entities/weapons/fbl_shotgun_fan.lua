@@ -19,7 +19,7 @@ SWEP.AdminSpawnable	= true
 SWEP.FireSound = Sound("Weapon_Soda_Popper.Single")
 
 SWEP.Primary.ClipSize = 2
-SWEP.Primary.DefaultClip = 4
+SWEP.Primary.DefaultClip = 84
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "Buckshot"
 
@@ -28,6 +28,5 @@ SWEP.Damage = 24
 
 SWEP.OverrideShotgunReload = true
 
-SWEP.DeployTime = 1
 SWEP.FireDelay = 0.28
 SWEP.Recoil = 9

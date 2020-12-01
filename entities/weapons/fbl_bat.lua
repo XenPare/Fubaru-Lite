@@ -27,6 +27,5 @@ SWEP.Primary.Ammo = "none"
 SWEP.Melee = true
 SWEP.Damage = 40
 
-SWEP.DeployTime = 1
 SWEP.FireDelay = 0.3
 SWEP.Recoil = 4

@@ -19,13 +19,12 @@ SWEP.AdminSpawnable	= true
 SWEP.FireSound = Sound("Weapon_Brawler_Blaster.Single")
 
 SWEP.Primary.ClipSize = 4
-SWEP.Primary.DefaultClip = 8
+SWEP.Primary.DefaultClip = 84
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "Buckshot"
 
 SWEP.Shots = 3
 SWEP.Damage = 16
 
-SWEP.DeployTime = 1
 SWEP.FireDelay = 0.3
 SWEP.Recoil = 6

@@ -38,7 +38,7 @@ SWEP.Secondary.DefaultClip = -1
 SWEP.Secondary.Automatic = true
 SWEP.Secondary.Ammo	= "none"
 
-SWEP.DeployTime = 1
+SWEP.DeployTime = 0.3
 SWEP.FireDelay = 0.1
 
 function SWEP:Initialize()

@@ -1,6 +1,6 @@
 "fbl"
 {
 	"base"		"base"
-	"title"		"Classic Jailbreak"
+	"title"		"Fubaru Lite"
 	"menusystem"	"1"
 }

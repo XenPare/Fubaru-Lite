@@ -19,7 +19,7 @@ SWEP.AdminSpawnable	= true
 SWEP.FireSound = Sound("Weapon_Short_Stop.Single")
 
 SWEP.Primary.ClipSize = 4
-SWEP.Primary.DefaultClip = 8
+SWEP.Primary.DefaultClip = 84
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "Buckshot"
 
@@ -28,6 +28,5 @@ SWEP.Damage = 9
 
 SWEP.OverrideShotgunReload = true
 
-SWEP.DeployTime = 1
 SWEP.FireDelay = 0.2
 SWEP.Recoil = 5.8
