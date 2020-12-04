@@ -39,7 +39,6 @@ local function openScoreboard()
 		putText("Fubaru Lite", fr:GetWide() / 2, -logotall / 2, color_white, "fbl_hud", 3)
 	end
 
-
 	local pnl = vgui.Create("DScrollPanel", fr)
 	pnl:Dock(FILL)
 
@@ -62,6 +61,7 @@ local function openScoreboard()
 				if self:IsHovered() then
 					clr = colors.hovered
 				end
+
 				if self:IsDown() then
 					clr = colors.down
 				end
@@ -75,15 +75,18 @@ local function openScoreboard()
 
 			btn.DoClick = function()
 				local menu = DermaMenu()
+
 				menu:AddOption("Show Profile", function()
 					pl:ShowProfile()
 				end):SetIcon("icon16/link.png")
+
 				if pl ~= LocalPlayer() then
 					menu:AddSpacer()
 					menu:AddOption("VoteKick", function()
 						RunConsoleCommand("xpa", "votekick", pl:SteamID())
 					end):SetIcon("icon16/door_open.png")
 				end
+
 				menu:Open()
 			end
 
@@ -109,7 +112,6 @@ hook.Add("ScoreboardShow", "FBL", function()
     else 
         openScoreboard()
 	end     
-	
 	return true
 end)
 

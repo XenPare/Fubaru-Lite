@@ -3,26 +3,7 @@ include("shared.lua")
 CreateClientConVar("fbl_primary", "", true, true)
 CreateClientConVar("fbl_secondary", "", true, true)
 
-local HideHUD = {
-	["CHudBattery"] = true,
-	["CHudHealth"] = true,	
-	["CHudAmmo"] = true,
-	["CHudSecondaryAmmo"] = true,
-	--["CHudDamageIndicator"] = true,
-	["CHudSuitPower"] = true,
-	["CHudZoom"] = true,
-	["CHudWeaponSelection"] = true
-}
-
-hook.Add("HUDShouldDraw", "FBL", function(name)
-	if HideHUD[name] then 
-		return false 
-	end
-end)
-
-function GM:HUDDrawTargetID()
-	return
-end
+local CFG = FBL.Config
 
 local newinv
 local function SelectWeapon(class)
@@ -40,7 +21,7 @@ function GM:CreateMove(cmd)
 	end
 end
 
-local delay = FBL.Config.WeaponSelectorDelay
+local delay = CFG.WeaponSelectorDelay
 local last = -delay
 local wep, primary, secondary
 function GM:PlayerBindPress(pl, bind, pressed)
@@ -62,3 +43,14 @@ function GM:PlayerBindPress(pl, bind, pressed)
 		last = CurTime()
 	end
 end
+
+function GM:HUDDrawTargetID()
+	return
+end
+
+local tohide = CFG.HideHUD
+hook.Add("HUDShouldDraw", "FBL", function(name)
+	if tohide[name] then 
+		return false 
+	end
+end)

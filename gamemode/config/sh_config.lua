@@ -9,3 +9,13 @@ FBL.Config.PrimaryDefault = "fbl_shotgun_elegant"
 FBL.Config.SecondaryDefault = "fbl_pistol_elegant"
 
 FBL.Config.Playermodel = "models/player/scoutplayer/scout.mdl"
+
+FBL.Config.HideHUD = {
+	["CHudBattery"] = true,
+	["CHudHealth"] = true,	
+	["CHudAmmo"] = true,
+	["CHudSecondaryAmmo"] = true,
+	["CHudSuitPower"] = true,
+	["CHudZoom"] = true,
+	["CHudWeaponSelection"] = true
+}
