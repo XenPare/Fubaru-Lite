@@ -7,8 +7,6 @@ local CFG = FBL.Config
 hook.Add("PlayerInitialSpawn", "FBL", function(pl)
 	local color = ColorRand()
 
-	pl:SetTeam(pl:IsAdmin() and TEAM_ADMIN or TEAM_MERCENARY)
-
 	pl:SetWalkSpeed(CFG.WalkSpeed)
 	pl:SetRunSpeed(CFG.RunSpeed)
 	pl:SetJumpPower(CFG.JumpPower)
@@ -18,6 +16,10 @@ hook.Add("PlayerInitialSpawn", "FBL", function(pl)
 	pl:Give(pl:GetPrimaryWeapon())
 	pl:Give(pl:GetSecondaryWeapon())
 	pl:SelectWeapon(pl:GetPrimaryWeapon())
+
+	pl:SetSimpleTimer(0.1, function()
+		pl:SetTeam(TEAM_MERCENARY)
+	end)
 end)
 
 hook.Add("PlayerSpawn", "FBL", function(pl)
