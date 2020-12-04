@@ -1,7 +1,7 @@
-function FBL.putText(text, x, y, color, font, ang, shadow)
+function FBL.PutText(text, x, y, color, font, ang, shadow)
 	local _x, _y = x, y
 	if shadow then
-		putText(text, _x, _y, shadow, font .. "_s", ang)
+		FBL.PutText(text, _x, _y, shadow, font .. "_s", ang)
 	end
 
 	render.PushFilterMag(TEXFILTER.ANISOTROPIC)
