@@ -17,6 +17,9 @@ function GM:Initialize()
 end
 
 hook.Add("PlayerSelectSpawn", "FBL", function()
+	if not CFG.Maps[game.GetMap()] then
+		return
+	end
 	local spawns = ents.FindByClass("fbl_spawn")
 	local random = math.random(#spawns)
 	return spawns[random]
