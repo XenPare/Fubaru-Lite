@@ -17,6 +17,10 @@ hook.Add("HUDShouldDraw", "FBL", function(name)
 	end
 end)
 
+function GM:HUDDrawTargetID()
+	return
+end
+
 local newinv
 local function SelectWeapon(class)
 	newinv = class
