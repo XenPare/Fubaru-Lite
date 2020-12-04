@@ -4,6 +4,24 @@ include("shared.lua")
 
 local CFG = FBL.Config
 
+function GM:Initialize()
+	local map = CFG.Maps[game.GetMap()]
+	if not map then
+		return
+	end
+	for _, pos in pairs(map) do
+		local spawn = ents.Create("fbl_spawn")
+		spawn:SetPos(pos)
+		spawn:Spawn()
+	end
+end
+
+hook.Add("PlayerSelectSpawn", "FBL", function()
+	local spawns = ents.FindByClass("fbl_spawn")
+	local random = math.random(#spawns)
+	return spawns[random]
+end)
+
 hook.Add("PlayerInitialSpawn", "FBL", function(pl)
 	local color = ColorRand()
 
