@@ -16,37 +16,10 @@ surface.CreateFont("fbl_hud_s", {
 	antialias = true
 })
 
-local function putText(text, x, y, color, font, ang, shadow)
-	local _x, _y = x, y
-	if shadow then
-		putText(text, _x, _y, shadow, font .. "_s", ang)
-	end
-
-	render.PushFilterMag(TEXFILTER.ANISOTROPIC)
-	render.PushFilterMin(TEXFILTER.ANISOTROPIC)
-		surface.SetFont(font)
-		surface.SetTextColor(color)
-		surface.SetTextPos(0, 0)
-
-		local textWidth, textHeight = surface.GetTextSize(text)
-		local rad = -math.rad(ang)
-		x = x - math.cos(rad) * textWidth / 2 + math.sin(rad) * textHeight / 2
-		y = y + math.sin(rad) * textWidth / 2 + math.cos(rad) * textHeight / 2
-
-		local m = Matrix()
-		m:SetAngles(Angle(0, ang, 0))
-		m:SetTranslation(Vector(x, y, 0))
-
-		cam.PushModelMatrix(m)
-			surface.DrawText(text)
-		cam.PopModelMatrix()
-	render.PopFilterMag()
-	render.PopFilterMin()
-end
-
 local pl, health, armor, wep, clip1, count
 local color_hp, color_ar = Color(251, 63, 44, 195), Color(0, 161, 255)
 local color_ammo = Color(45, 45, 45, 195)
+local putText = FBL.putText
 hook.Add("HUDPaint", "FBL", function()
 	pl = LocalPlayer()
 	if not pl:Alive() then
