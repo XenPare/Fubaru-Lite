@@ -19,7 +19,7 @@ surface.CreateFont("fbl_hud_s", {
 local pl, health, armor, wep, clip1, count
 local color_hp, color_ar = Color(251, 63, 44, 195), Color(0, 161, 255)
 local color_ammo = Color(45, 45, 45, 195)
-local putText = FBL.putText
+local putText = FBL.PutText
 hook.Add("HUDPaint", "FBL", function()
 	pl = LocalPlayer()
 	if not pl:Alive() then

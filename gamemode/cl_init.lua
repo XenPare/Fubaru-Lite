@@ -1,10 +1,13 @@
 include("shared.lua")
 
+CreateClientConVar("fbl_primary", "", true, true)
+CreateClientConVar("fbl_secondary", "", true, true)
+
 local HideHUD = {
 	["CHudBattery"] = true,
 	["CHudHealth"] = true,	
-	--["CHudAmmo"] = true,
-	--["CHudSecondaryAmmo"] = true,
+	["CHudAmmo"] = true,
+	["CHudSecondaryAmmo"] = true,
 	--["CHudDamageIndicator"] = true,
 	["CHudSuitPower"] = true,
 	["CHudZoom"] = true,
