@@ -1,5 +1,5 @@
 FBL.Config.EventTimer = 300
-FBL.Config.WeaponSelectorDelay = 0.15
+FBL.Config.WeaponSelectorDelay = 0.1
 
 FBL.Config.WalkSpeed = 300
 FBL.Config.RunSpeed = 500
