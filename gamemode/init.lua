@@ -48,3 +48,7 @@ hook.Add("PlayerDeath", "FBL", function(victim, inflictor, killer)
 		_killer:GiveAmmo(math.random(6, 18), ammo_secondary)
 	end
 end)
+
+hook.Add("GetFallDamage", "FBL", function()
+    return 0
+end)
