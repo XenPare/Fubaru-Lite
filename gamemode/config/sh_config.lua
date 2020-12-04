@@ -10,6 +10,14 @@ FBL.Config.SecondaryDefault = "fbl_pistol_elegant"
 
 FBL.Config.Playermodel = "models/player/scoutplayer/scout.mdl"
 
+FBL.Config.Workshop = {
+	"284337366", -- Scout PlayerModel
+	"947897747", -- Mad Weapons
+	"947417471", -- Fan Weapons
+	"947307512", -- Elegant Weapons
+	"2308290678" -- FBL Maps
+}
+
 FBL.Config.HideHUD = {
 	["CHudBattery"] = true,
 	["CHudHealth"] = true,	
