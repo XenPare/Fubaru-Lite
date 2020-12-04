@@ -58,6 +58,9 @@ hook.Add("PlayerDeath", "FBL", function(victim, inflictor, killer)
 		if not inflictor.Owner then
 			_killer = inflictor.Owner
 		end
+		if not IsValid(_killer) or _killer == nil then
+			return
+		end
 	end
 	local ammo_primary = FBL.GetWeaponInfo(_killer:GetPrimaryWeapon(), "Primary", "Ammo")
 	local ammo_secondary = FBL.GetWeaponInfo(_killer:GetSecondaryWeapon(), "Primary", "Ammo")
