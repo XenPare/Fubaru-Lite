@@ -5,6 +5,7 @@ FBL.Config.WalkSpeed = 300
 FBL.Config.RunSpeed = 500
 FBL.Config.JumpPower = 240
 
+FBL.Config.SaverRespawnDelay = 135
 FBL.Config.SaverRadius = 70
 FBL.Config.JumperPotionAction = 45
 FBL.Config.JumperPotionAdder = 200
