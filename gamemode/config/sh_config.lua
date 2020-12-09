@@ -30,6 +30,5 @@ FBL.Config.HideHUD = {
 	["CHudAmmo"] = true,
 	["CHudSecondaryAmmo"] = true,
 	["CHudSuitPower"] = true,
-	["CHudZoom"] = true,
 	["CHudWeaponSelection"] = true
 }
