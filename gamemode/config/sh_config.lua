@@ -15,7 +15,8 @@ FBL.Config.Workshop = {
 	"947897747", -- Mad Weapons
 	"947417471", -- Fan Weapons
 	"947307512", -- Elegant Weapons
-	"2308290678" -- FBL Maps
+	"2308290678", -- FBL Maps
+	"1163019696" -- Potions
 }
 
 FBL.Config.HideHUD = {
