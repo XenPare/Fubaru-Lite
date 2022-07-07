@@ -28,9 +28,9 @@ SWEP.Recoil = 1
 SWEP.Damage = 25
 SWEP.Shots = 1
 
-SWEP.Primary.ClipSize = -1	
-SWEP.Primary.DefaultClip = -1	
-SWEP.Primary.Automatic = false	
+SWEP.Primary.ClipSize = -1
+SWEP.Primary.DefaultClip = -1
+SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "none"
 
 SWEP.Secondary.ClipSize	= -1
@@ -70,26 +70,26 @@ end
 function SWEP:ShootBullet(damage, num_bullets, aimcone)
 	local bullet = {}
 	if self.Shots > 1 then
-		for i = 1, self.Shots do 
-			bullet.Num = self.Primary.Shots				
-			bullet.Src = self.Owner:GetShootPos()			
-			bullet.Dir = self.Owner:GetAimVector()			
+		for i = 1, self.Shots do
+			bullet.Num = self.Primary.Shots
+			bullet.Src = self.Owner:GetShootPos()
+			bullet.Dir = self.Owner:GetAimVector()
 			bullet.Spread = Vector(aimcone, aimcone, 0) + VectorRand(0, 0.1)
-			bullet.Tracer = 5			
-			bullet.Force = 1				
-			bullet.Damage = self.Damage				
-			bullet.AmmoType = self.Primary.Ammo	
+			bullet.Tracer = 5
+			bullet.Force = 1
+			bullet.Damage = self.Damage
+			bullet.AmmoType = self.Primary.Ammo
 			self.Owner:FireBullets(bullet)
 		end
 	else
-		bullet.Num = self.Primary.Shots				
-		bullet.Src = self.Owner:GetShootPos()			
-		bullet.Dir = self.Owner:GetAimVector()			
+		bullet.Num = self.Primary.Shots
+		bullet.Src = self.Owner:GetShootPos()
+		bullet.Dir = self.Owner:GetAimVector()
 		bullet.Spread = Vector(aimcone, aimcone, 0)
-		bullet.Tracer = 5			
-		bullet.Force = 1				
-		bullet.Damage = self.Damage				
-		bullet.AmmoType = self.Primary.Ammo	
+		bullet.Tracer = 5
+		bullet.Force = 1
+		bullet.Damage = self.Damage
+		bullet.AmmoType = self.Primary.Ammo
 		self.Owner:FireBullets(bullet)
 	end
 	self:ShootEffects()
@@ -109,7 +109,7 @@ function SWEP:PrimaryAttack()
 			filter = self.Owner,
 			mask = MASK_SHOT_HULL
 		})
-	
+
 		if not IsValid(tr.Entity) then
 			tr = util.TraceHull({
 				start = self.Owner:GetShootPos(),
@@ -120,7 +120,7 @@ function SWEP:PrimaryAttack()
 				mask = MASK_SHOT_HULL
 			})
 		end
-	
+
 		if IsValid(tr.Entity) then
 			if SERVER then
 				local dmg = DamageInfo()
@@ -129,7 +129,7 @@ function SWEP:PrimaryAttack()
 				dmg:SetDamage(self.Damage)
 				dmg:SetDamageForce(self.Owner:GetForward() * 1000)
 				dmg:SetAttacker(self.Owner or self)
-	
+
 				tr.Entity:TakeDamageInfo(dmg)
 			end
 			self:EmitSound(self.HitSound or self.FireSound)
@@ -148,7 +148,7 @@ function SWEP:PrimaryAttack()
 		self:TakePrimaryAmmo(1)
 		self:MakeRecoil()
 	end
-	
+
 	if CLIENT then
 		self.CrossAmount = self.CrossAmount + self.Recoil
 	end
@@ -161,7 +161,7 @@ function SWEP:SecondaryAttack()
 end
 
 function SWEP:Reload()
-	if self.Owner:GetAmmoCount(self.Primary.Ammo) == 0 or self:Clip1() == self:GetMaxClip1() then 
+	if self.Owner:GetAmmoCount(self.Primary.Ammo) == 0 or self:Clip1() == self:GetMaxClip1() then
 		return
 	end
 
@@ -192,6 +192,6 @@ function SWEP:Reload()
 		local seq_reload_d = self:SequenceDuration(seq_reload)
 		self:SetNextPrimaryFire(CurTime() + seq_reload_d)
 	end
-	
+
 	self:SetHoldType(self.HoldType)
 end

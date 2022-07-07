@@ -33,7 +33,7 @@ if SERVER then
 		self:SetCollisionGroup(COLLISION_GROUP_WEAPON)
 		self:SetPos(self:GetPos() + Vector(0, 0, 40))
 	end
-	
+
 	local pos
 	local radius = FBL.Config.SaverRadius
 	function ENT:Think()

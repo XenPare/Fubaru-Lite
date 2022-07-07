@@ -17,14 +17,14 @@ if SERVER then
 	end
 
 	ENT.SaveFunc = function(pl)
-        pl:SetJumpPower(pl:GetJumpPower() + FBL.Config.JumperPotionAdder)
-        pl:SetNWBool("FBL Jumper Potion", true)
+		pl:SetJumpPower(pl:GetJumpPower() + FBL.Config.JumperPotionAdder)
+		pl:SetNWBool("FBL Jumper Potion", true)
 		pl:SetTimer("FBL Jumper Potion", FBL.Config.JumperPotionAction, 1, function()
 			if not pl:GetNWBool("FBL Jumper Potion") then
 				return
 			end
 			pl:SetJumpPower(pl:GetJumpPower() - FBL.Config.JumperPotionAdder)
-            pl:SetNWBool("FBL Jumper Potion", false)
+			pl:SetNWBool("FBL Jumper Potion", false)
 		end)
 	end
 
@@ -35,5 +35,5 @@ if SERVER then
 		pl:SetJumpPower(pl:GetJumpPower() - FBL.Config.JumperPotionAdder)
 		pl:SetNWBool("FBL Jumper Potion", false)
 		pl:RemoveTimer("FBL Jumper Potion")
-    end)
+	end)
 end

@@ -76,5 +76,5 @@ hook.Add("PlayerDeath", "FBL", function(victim, inflictor, killer)
 end)
 
 hook.Add("GetFallDamage", "FBL", function()
-    return 0
+	return 0
 end)

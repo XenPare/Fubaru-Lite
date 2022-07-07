@@ -50,7 +50,7 @@ end
 
 local tohide = CFG.HideHUD
 hook.Add("HUDShouldDraw", "FBL", function(name)
-	if tohide[name] then 
-		return false 
+	if tohide[name] then
+		return false
 	end
 end)

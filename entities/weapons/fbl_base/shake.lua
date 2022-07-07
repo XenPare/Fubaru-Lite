@@ -19,7 +19,7 @@ local function GetVMAffectedPosAng(self)
 	local max = 5
 	sway.x = math.Clamp(sway.x + _ea.p * 0.25, -max, max)
 	sway.y = math.Clamp(sway.y + _ea.y * 0.25, -max, max)
-	
+
 	local velRoll = math.Clamp((vel:DotProduct(EyeAngles():Right()) * 0.04) * move, -5, 5)
 	ang = ang + Vector(sway.x, sway.y * 2, velRoll - sway.y)
 	pos = pos + Vector(sway.y * 0.5, 0, sway.x * 0.5)

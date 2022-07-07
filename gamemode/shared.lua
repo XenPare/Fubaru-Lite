@@ -12,9 +12,9 @@ XPA.IncludeCompounded("fbl/gamemode/core/*")
 
 TEAM_MERCENARY = 1
 function GM:PreGamemodeLoaded()
-    team.SetUp(TEAM_MERCENARY, "Mercenary", Color(46, 46, 46), false)
+	team.SetUp(TEAM_MERCENARY, "Mercenary", Color(46, 46, 46), false)
 end
 
 function GM:Move(pl)
-    return not pl:Alive()
+	return not pl:Alive()
 end

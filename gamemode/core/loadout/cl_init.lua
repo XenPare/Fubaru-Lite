@@ -4,7 +4,7 @@ local primary, secondary = loadout.primary, loadout.secondary
 net.Receive("FBL Loadout", function()
 	local selected, buttons_primary, buttons_secondary = {}, {}, {}
 
-    local fr = vgui.Create("XPFrame")
+	local fr = vgui.Create("XPFrame")
 	fr:SetTitle("Loadout")
 	fr:SetKeyboardInputEnabled(false)
 
@@ -29,7 +29,7 @@ net.Receive("FBL Loadout", function()
 
 	for name, data in pairs(primary) do
 		local info = ""
-		local function getInfo(...) 
+		local function getInfo(...)
 			return FBL.GetWeaponInfo(data.class, ...)
 		end
 
@@ -81,7 +81,7 @@ net.Receive("FBL Loadout", function()
 
 	for name, data in pairs(secondary) do
 		local info = ""
-		local function getInfo(...) 
+		local function getInfo(...)
 			return FBL.GetWeaponInfo(data.class, ...)
 		end
 
